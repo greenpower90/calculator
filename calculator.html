@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+  <html>
+    <head>
+      <title>09 - Calculator</title>
+      <link rel="stylesheet" href="styles/10-calculator.css">
+      <!--Meta viewport nastaven pro upravení stránek pro mobilní zařízení-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+      <!-- Favicon -->
+      <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+      <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+      <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+      <link rel="manifest" href="/site.webmanifest">
+
+    </head>
+    <body>
+      <div class="calculator-frame">
+        <div class="js-calculation result-line">
+          <!--here will be displayed the calculation-->
+        </div>
+  
+        <div class="main-grid">
+          <button class="btn" onclick="
+            calculate('1');         
+           ">1</button>
+  
+          <button class="btn" onclick="
+          calculate('2');
+          ">2</button>
+  
+          <button class="btn" onclick="
+          calculate('3');
+          ">3</button>
+  
+          <button class="btn action" onclick="
+          calculate('+');
+          ">+</button>
+  
+          <button class="btn" onclick="
+          calculate('4');
+          ">4</button>
+  
+          <button class="btn" onclick="
+          calculate('5');
+          ">5</button>
+  
+          <button class="btn" onclick="
+          calculate('6');
+          ">6</button>
+  
+          <button class="btn action" onclick="
+          calculate('-');
+          ">-</button>
+  
+          <button class="btn" onclick="
+          calculate('7');
+          ">7</button>
+  
+          <button class="btn" onclick="
+          calculate('8');
+          ">8</button>
+  
+          <button class="btn" onclick="
+          calculate('9');
+          ">9</button>
+  
+          <button class="btn action" onclick="
+          calculate('*');
+          ">*</button>
+  
+          <button class="btn" onclick="
+          calculate('0');
+          ">0</button>
+  
+          <button class="btn" onclick="
+          calculate('.');
+          ">.</button>
+  
+          <button class="btn" onclick="
+            eval(calculation);
+            calculation = eval(calculation);
+            localStorage.setItem('calculation', calculation);
+            document.querySelector('.js-calculation')
+              .innerHTML = calculation;
+            console.log(calculation);
+          " >=</button>
+  
+          <button class="btn action" onclick="
+          calculate('/');
+          ">/</button>
+          
+        </div>
+        <button class="btn" onclick="
+        calculation = '';
+        localStorage.setItem('calculation', calculation);
+        document.querySelector('.js-calculation')
+            .innerHTML = '0';
+        console.log('0');
+      ">Clear</button>
+      </div>   
+      
+      <script src="scripts/calculator.js"></script>
+    </body>
+  </html>
