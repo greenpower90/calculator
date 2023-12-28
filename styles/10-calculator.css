@@ -1,7 +1,24 @@
+body{
+  margin: 0;
+  background-color: darkgray;
+  display: flex;
+}
+
+.container{
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  height: 420px;
+  width: 300px;
+}
+
 .calculator-frame{
-  display: inline-block;
   background-color: rgb(0, 0, 0);
-  padding: 15px;
+  padding: 25px;
+  border-radius: 10px;
 }
 .result-line{
   border: none; 
